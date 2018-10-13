@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  line-height: 1.5;
+  margin: 0;
+  background: #fff;
+  color: #122720;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Merriweather Sans", sans-serif;
+  line-height: 1.1;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #00ae76;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+section h2 {
+  margin-bottom: 0;
+}
+section h2:after {
+  content: "";
+  border-top: 4px solid #00ae76;
+  width: 60px;
+  height: 4px;
+  display: block;
+  margin: 1.5rem auto 0;
+}
+
+a {
+  color: #00ae76;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* elements */
+
+.narrow {
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
+
+.cta {
+  text-align: center;
+}
+
+.button,
+input[type="submit"] {
+  background: #00ae76;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-family: "Merriweather Sans" sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.cards-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #aaa;
+  margin-bottom: 1rem;
+}
+
+.highlighted {
+  border-top: 5px solid #00ae76;
+}
+
+.fee strong {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.attendance-list {
+  list-style: square;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.caption {
+  opacity: 0.6;
+  font-style: italic;
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+}
+
+/* sections */
+
+nav {
+  height: 80px;
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav img {
+  height: 60px;
+  width: auto;
+}
+
+header {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2rem 2rem 6rem;
+  background: #ecf5f2;
+}
+
+header p {
+  margin: 0.5rem;
+}
+
+header img {
+  width: 200px;
+  height: auto;
+}
+
+section {
+  margin-bottom: 6rem;
+  padding: 0 2rem;
+}
+
+.imagestrip {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1px;
+  /* background: #ecf5f2; */
+}
+
+.imagestrip .caption {
+  grid-column: span 3;
+}
+
+footer {
+  background: #ecf5f2;
+  padding: 3rem 2rem;
+}
+
+.form-overlay {
+  background: rgba(236, 245, 242, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  opacity: 0;
+  transition: 0.2s ease-in opacity;
+}
+
+.form-block {
+  width: 300px;
+  background: #fff;
+  padding: 2rem;
+  border-top: 5px solid #00ae76;
+  display: none;
+  opacity: 0;
+  transition: 0.4s ease-in opacity;
+}
+
+.form-block h3 {
+  margin-top: 0;
+}
+
+.form-block .cta {
+  margin-bottom: 0;
+}
+
+label {
+  display: block;
+  font-size: 0.8rem;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.speakers,
+.team {
+  display: block;
+}
+
+.speaker,
+.team-member {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-bottom: 50px;
+}
+
+.speaker img,
+.team-member img {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.speaker strong,
+.team-member strong {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+@media screen and (min-width: 650px) {
+  .cards-list {
+    display: grid;
+    grid-gap: 1rem;
+  }
+
+  .fees {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sponsors {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .speakers,
+  .team {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-row-gap: 0;
+    margin: 1rem 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .speaker,
+  .team-member {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 864px) {
+  section:not(.imagestrip),
+  header,
+  footer,
+  nav {
+    padding-right: calc(50vw - 400px);
+    padding-left: calc(50vw - 400px);
+  }
+
+  .imagestrip {
+    grid-gap: 2px;
+  }
+
+  .attendance-list {
+    columns: 2;
+    column-gap: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .wide {
+    width: calc(100% + 4rem);
+    margin-left: -2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .wide {
+    width: calc(100% + 12rem);
+    margin-left: -6rem;
+  }
+}
