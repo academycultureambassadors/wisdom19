@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans");
-
 * {
   box-sizing: border-box;
 }
@@ -16,9 +15,7 @@ body {
   color: #122720;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-family: "Merriweather Sans", sans-serif;
   line-height: 1.1;
   text-align: center;
@@ -41,6 +38,7 @@ h3 {
 section h2 {
   margin-bottom: 0;
 }
+
 section h2:after {
   content: "";
   border-top: 4px solid #00ae76;
@@ -75,8 +73,7 @@ img {
   text-align: center;
 }
 
-.button,
-input[type="submit"] {
+.button, input[type="submit"] {
   background: #00ae76;
   color: #fff;
   display: inline-block;
@@ -201,7 +198,9 @@ footer {
 }
 
 .form-block {
-  width: 300px;
+  width: 680px;
+  max-width: calc(100vw - 2rem);
+  margin: 1rem;
   background: #fff;
   padding: 2rem;
   border-top: 5px solid #00ae76;
@@ -223,27 +222,23 @@ label {
   font-size: 0.8rem;
 }
 
-input[type="text"],
-textarea {
+input[type="text"], textarea {
   width: 100%;
   padding: 0.5rem;
   font-size: 1rem;
 }
 
-.speakers,
-.team {
+.speakers, .team {
   display: block;
 }
 
-.speaker,
-.team-member {
+.speaker, .team-member {
   text-align: center;
   font-size: 0.8rem;
   margin-bottom: 50px;
 }
 
-.speaker img,
-.team-member img {
+.speaker img, .team-member img {
   border-radius: 50%;
   width: 100%;
   max-width: 200px;
@@ -252,8 +247,7 @@ textarea {
   margin: 0 auto;
 }
 
-.speaker strong,
-.team-member strong {
+.speaker strong, .team-member strong {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   display: block;
@@ -264,53 +258,41 @@ textarea {
     display: grid;
     grid-gap: 1rem;
   }
-
   .fees {
     grid-template-columns: repeat(3, 1fr);
   }
   .sponsors {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .speakers,
-  .team {
+  .speakers, .team {
     display: grid;
     grid-column-gap: 50px;
     grid-row-gap: 0;
     margin: 1rem 0;
     grid-template-columns: repeat(2, 1fr);
   }
-
   .team {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  .speaker,
-  .team-member {
+  .speaker, .team-member {
     margin-bottom: 1rem;
   }
 }
 
 @media screen and (min-width: 864px) {
-  section:not(.imagestrip),
-  header,
-  footer,
-  nav {
+  section:not(.imagestrip), header, footer, nav {
     padding-right: calc(50vw - 400px);
     padding-left: calc(50vw - 400px);
   }
-
   .imagestrip {
     grid-gap: 2px;
   }
-
   .attendance-list {
     columns: 2;
     column-gap: 3rem;
     margin-left: 3rem;
     margin-right: 3rem;
   }
-
   .wide {
     width: calc(100% + 4rem);
     margin-left: -2rem;
