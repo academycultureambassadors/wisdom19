@@ -279,7 +279,7 @@ footer img.founder {
     grid-gap: 1rem;
   }
   .fees {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .sponsors {
     grid-template-columns: repeat(2, 1fr);
